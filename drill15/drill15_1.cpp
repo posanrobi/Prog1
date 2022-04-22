@@ -10,7 +10,6 @@ g++ -w -Wall -std=c++11 GUI/Graph.cpp GUI/Window.cpp GUI/GUI.cpp GUI/Simple_wind
 
 using namespace Graph_lib;
 
-
 double one(double x) {return 1;}
 double slope(double x) {return x/2;}
 double square (double x) {return x*x;}
@@ -48,12 +47,17 @@ try {
 
 	Function func1 {one,r_min,r_max,orig,num_of_points,x_scale,y_scale};
 	Function func2 {slope,r_min,r_max,orig,num_of_points,x_scale,y_scale};
+	Function func_square {square,r_min,r_max,orig,num_of_points,x_scale,y_scale};
 	Function func3 {cos,r_min,r_max,orig,num_of_points,x_scale,y_scale};
 	func3.set_color(Color::blue);
 	Function func4 {sloping_cos,r_min,r_max,orig,num_of_points,x_scale,y_scale};
 	
+	Text t {Point{100,400},"x/2"};
+	win.attach(t);
+	
 	win.attach(func1);
 	win.attach(func2);
+	win.attach(func_square);
 	win.attach(func3);
 	win.attach(func4);
 
