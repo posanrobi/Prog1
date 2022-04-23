@@ -35,7 +35,6 @@ void print(const C& c, char sep = '\n'){
 	for(const auto elem : c){
 		std::cout << elem << sep;
 	}
-
 	std::cout << std::endl;
 }
 
@@ -99,14 +98,14 @@ int main(){
 		print(vi);
 
 		// 6
-		vi.erase(std::find_if(vi.begin(), vi.end(), findbyname("lamp")));
-		vi.erase(std::find_if(vi.begin(), vi.end(), findbyname("phone")));
+		vi.erase(std::find_if(vi.begin(), vi.end(), findbyname("table")));
+		vi.erase(std::find_if(vi.begin(), vi.end(), findbyname("book")));
 		std::cout << "6. 2 Items erased by name\n" << std::endl;
 		print(vi);
 
 		// 7
-		vi.erase(std::find_if(vi.begin(), vi.end(), findbyiid(1)));
-		vi.erase(std::find_if(vi.begin(), vi.end(), findbyiid(69)));
+		vi.erase(std::find_if(vi.begin(), vi.end(), findbyiid(3)));
+		vi.erase(std::find_if(vi.begin(), vi.end(), findbyiid(6)));
 		std::cout << "7. 2 Items erased by iid\n" << std::endl;
 		print(vi);
 
@@ -137,12 +136,12 @@ int main(){
 		print(li);
 
 		li.erase(std::find_if(li.begin(), li.end(), findbyname("chair")));
-		li.erase(std::find_if(li.begin(), li.end(), findbyname("pen")));
+		li.erase(std::find_if(li.begin(), li.end(), findbyname("apple")));
 		std::cout << "8.6. 2 Items erased by name\n" << std::endl;
 		print(li);
 
-		li.erase(std::find_if(li.begin(), li.end(), findbyiid(11)));
-		li.erase(std::find_if(li.begin(), li.end(), findbyiid(9)));
+		li.erase(std::find_if(li.begin(), li.end(), findbyiid(4)));
+		li.erase(std::find_if(li.begin(), li.end(), findbyiid(7)));
 		std::cout << "8.7. 2 Items erased by iid\n" << std::endl;
 		print(li);
 
